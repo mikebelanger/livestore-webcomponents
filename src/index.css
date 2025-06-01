@@ -1,0 +1,37 @@
+/* Todo item layout - uses flexbox to align checkbox, label, and delete button horizontally */
+li.todo-item {
+    display: flex;
+    align-items: center;        /* Vertically center all child elements */
+    flex-direction: row;        /* Arrange children horizontally (left to right) */
+    padding: 0.5em;
+}
+
+/* When the checkbox is checked, apply strikethrough to the entire todo item */
+li.todo-item:has(input:checked) {
+    text-decoration: line-through;
+}
+
+/* Delete button styling - hidden by default, shown on hover */
+li.todo-item > button.delete-todo {
+    display: none;              /* Hidden by default to keep UI clean */
+    padding: 0.25rem;           /* Small padding around the icon */
+    border: none;               /* Remove default button border */
+    background: transparent;     /* Transparent background */
+    cursor: pointer;            /* Show pointer cursor on hover */
+    align-items: center;        /* Center the SVG icon vertically */
+    justify-content: center;    /* Center the SVG icon horizontally */
+    width: 2rem;                /* Fixed width for consistent sizing */
+    height: 2rem;               /* Fixed height for consistent sizing */
+}
+
+/* Show delete button when hovering over the todo item */
+li.todo-item:hover > button.delete-todo {
+    display: flex;              /* Use flex to enable centering of the SVG icon */
+    max-height: 1em;
+    text-decoration: none !important;  /* Prevent strikethrough from affecting button */
+}
+
+/* Change button color to red when hovering directly over the delete button */
+li.todo-item > button.delete-todo:hover {
+    color: red;                 /* Red color indicates destructive action */
+}
