@@ -1,6 +1,6 @@
 # Todo Example
 
-[Demo](https://todovmc.livestore.dev)
+[Demo](https://mikebelanger.github.io/livestore-webcomponents/)
 
 ## Running locally
 

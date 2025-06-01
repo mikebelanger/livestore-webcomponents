@@ -16,7 +16,8 @@ export default defineConfig({
     port: 60_002,
   },
   build: {
-    target: ['es2022'], // Needed for top-level await to work
+    target: ['es2022'], // Needed for top-level await to work'
+    outDir: 'docs',
   },
   esbuild: {
     target: 'esnext',
